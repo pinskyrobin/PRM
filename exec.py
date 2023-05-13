@@ -17,7 +17,7 @@ flags.DEFINE_boolean("train", False, "train or predict")
 flags.DEFINE_string("train_set", "dataset/rec_train_set.sample.txt", "the file path of train set")
 flags.DEFINE_string("validation_set", "dataset/rec_validation_set.sample.txt", "the file path of validation set")
 flags.DEFINE_string("test_set", "dataset/test.sample.txt", "the file path of test set")
-flags.DEFINE_string("saved_model_name", "drr_model.h5", "the saved model name")
+flags.DEFINE_string("saved_model_name", "PRM.h5", "the saved model name")
 flags.DEFINE_integer("batch_size", 512, "batch size for training")
 flags.DEFINE_integer("seq_len", 30, "the length of input list")
 flags.DEFINE_integer("train_epochs", 100, "epoch for training")
@@ -27,14 +27,14 @@ flags.DEFINE_integer("early_stop_patience", 10, "early stop when model is not im
 flags.DEFINE_integer("lr_per_step", 4000, "update learning rate per X step")
 
 flags.DEFINE_integer("d_feature", 12, "the feature length of each item in the input list")
-flags.DEFINE_integer("d_model", 64, "param used drr_model")
-flags.DEFINE_integer("d_inner_hid", 128, "param used in drr_model")
-flags.DEFINE_integer("n_head", 1, "param used in drr_model")
-flags.DEFINE_integer("d_k", 64, "param used in drr_model")
-flags.DEFINE_integer("d_v", 64, "param used in drr_model")
-flags.DEFINE_integer("n_layers", 4, "param used in drr_model")
-flags.DEFINE_float("dropout", 0.1, "param used in drr_model")
-flags.DEFINE_integer("pos_embedding_mode", 1, "param use d in drr_model")  # 0:no PV  1:use PV
+flags.DEFINE_integer("d_model", 64, "param used PRM_model")
+flags.DEFINE_integer("d_inner_hid", 128, "param used in PRM_model")
+flags.DEFINE_integer("n_head", 1, "param used in PRM_model")
+flags.DEFINE_integer("d_k", 64, "param used in PRM_model")
+flags.DEFINE_integer("d_v", 64, "param used in PRM_model")
+flags.DEFINE_integer("n_layers", 4, "param used in PRM_model")
+flags.DEFINE_float("dropout", 0.1, "param used in PRM_model")
+flags.DEFINE_integer("pos_embedding_mode", 1, "param use d in PRM_model")  # 0:no PV  1:use PV
 
 FLAGS = flags.FLAGS
 
